@@ -4,3 +4,43 @@
 <ul>
   <li *ngFor="let course of courses">{{course.title}} - {{course.lecturer}}</li>
 </ul>
+<hr>
+<md-input-container>
+  <input mdInput placeholder="Favorite food" value="Sushi">
+</md-input-container>
+<hr>
+<md-card class="example-card">
+  <md-card-header>
+    <div md-card-avatar class="example-header-image"></div>
+    <md-card-title>Shiba Inu</md-card-title>
+    <md-card-subtitle>Dog Breed</md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+  <md-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button>LIKE</button>
+    <button md-button>SHARE</button>
+  </md-card-actions>
+</md-card>
+<hr>
+<md-list>
+  <h3 md-subheader>Folders</h3>
+  <md-list-item *ngFor="let folder of folders">
+    <md-icon md-list-icon>folder</md-icon>
+    <h4 md-line>{{folder.name}}</h4>
+    <p md-line> {{folder.updated | date}} </p>
+  </md-list-item>
+  <md-divider></md-divider>
+  <h3 md-subheader>Notes</h3>
+  <md-list-item *ngFor="let note of notes">
+    <md-icon md-list-icon>note</md-icon>
+    <h4 md-line>{{note.name}}</h4>
+    <p md-line> {{note.updated | date}} </p>
+  </md-list-item>
+</md-list>
