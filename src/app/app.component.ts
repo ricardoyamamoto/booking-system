@@ -8,10 +8,9 @@ import { Course } from './course';
 })
 
 export class AppComponent {
-  title = 'Booking System';
   courses: Course[];
 
-
+  toolbarTitle = 'Courseplanner2';
   folders = [
     {
       name: 'Photos',
